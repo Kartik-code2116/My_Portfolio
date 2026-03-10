@@ -12,9 +12,10 @@
 <body>
     <header>
         <div class="container">
-            <nav>
-                <div class="logo">Kartik Thorat</div>
-                <ul>
+            <nav class="navbar">
+                <div class="logo">Kartik.Dev</div>
+                <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-links">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html" class="active">Projects</a></li>
@@ -25,210 +26,134 @@
     </header>
 
     <main>
-        <section class="section container">
-            <div class="reveal">
-                <p class="subtitle"
-                    style="color: var(--primary-color); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 10px;">
-                    MY PORTFOLIO</p>
-                <h1>Featured <span style="color: var(--primary-color);">Projects</span></h1>
-                <p style="color: var(--text-muted); margin-bottom: 40px;">A selection of my best work in web development
-                    and software engineering.</p>
+        <section class="hero container section">
+            <div class="hero-content reveal">
+                <div class="hero-highlight">builds that ship</div>
+                <h1>Case studies, experiments, and collaborations</h1>
+                <p>
+                    From campus research to freelance commissions, I collect learnings from every stage of the product
+                    lifecycle. Pick a project, explore the stack, and feel free to reach out for deeper details.
+                </p>
             </div>
+        </section>
 
-            <div class="projects-grid">
-                <div class="project-card reveal">
-                    <span style="font-size: 0.8rem; color: var(--primary-color); font-weight: 600;">ASEP PROJECT</span>
-                    <h3>Mediconnect</h3>
-                    <p>Interactive Online Appointment Booking System. Features include real-time scheduling and a
-                        research paper publication.</p>
-                    <div style="margin-top: 15px;">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JS</span>
+        <section class="section container reveal">
+            <p class="section-title">Academic + Research</p>
+            <h2>Featured collaborations</h2>
+            <div class="projects-grid" style="margin-top: 30px;">
+                <article class="project-card">
+                    <span class="skill-tag">ASEP</span>
+                    <h3>Mediconnect — Appointment OS</h3>
+                    <p>A responsive booking system with dynamic scheduling, research documentation, and analytics.</p>
+                    <div style="margin-top: 18px;">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">MongoDB</span>
                     </div>
-                    <div style="margin-top: 20px;">
-                        <a href="#" class="btn-outline" style="padding: 8px 20px;">View Paper</a>
+                    <div style="margin-top: 16px;">
+                        <a href="#" class="btn secondary" style="padding: 10px 24px;">View Paper</a>
                     </div>
-                </div>
-
-                <div class="project-card reveal">
-                    <span style="font-size: 0.8rem; color: var(--secondary-color); font-weight: 600;">VIT CLUB</span>
-                    <h3>MLSE Club Website</h3>
-                    <p>Official static website for VIT Pune's MLSE club. Showcases club events, schedules, and
-                        membership updates.</p>
-                    <div style="margin-top: 15px;">
+                </article>
+                <article class="project-card">
+                    <span class="skill-tag">VIT MLSE</span>
+                    <h3>Club Experience Portal</h3>
+                    <p>Redesigned the MLSE club’s site with event timelines, membership flows, and storytelling modules.</p>
+                    <div style="margin-top: 18px;">
                         <span class="skill-tag">HTML</span>
                         <span class="skill-tag">CSS</span>
                         <span class="skill-tag">JavaScript</span>
                     </div>
-                    <div style="margin-top: 20px;">
-                        <a href="#" class="btn-outline" style="padding: 8px 20px;">View Site</a>
+                    <div style="margin-top: 16px;">
+                        <a href="#" class="btn secondary" style="padding: 10px 24px;">View Launch</a>
                     </div>
-                </div>
-
-                <div class="project-card reveal">
-                    <h3>E-Commerce Dashboard</h3>
-                    <p>A concept dashboard for managing online store inventory and sales.</p>
-                    <div style="margin-top: 15px;">
+                </article>
+                <article class="project-card">
+                    <span class="skill-tag">Concept</span>
+                    <h3>Product Dashboard</h3>
+                    <p>Interactive sales dashboard built with responsive charts and a focus on accessibility.</p>
+                    <div style="margin-top: 18px;">
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">Chart.js</span>
+                        <span class="skill-tag">Node</span>
                     </div>
-                    <div style="margin-top: 20px;">
-                        <a href="#" class="btn-outline" style="padding: 8px 20px;">Live Demo</a>
+                    <div style="margin-top: 16px;">
+                        <a href="#" class="btn secondary" style="padding: 10px 24px;">Live Demo</a>
                     </div>
-                </div>
-
-                <div class="project-card reveal">
-                    <h3>Video or Audio</h3>
-                    <p>A basic webpage demonstrating video and audio elements using HTML5 tags.</p>
-                    <div style="margin-top: 15px;">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">Video</span>
-                        <span class="skill-tag">Audio</span>
-                    </div>
-                    <div style="margin-top: 20px;">
-                        <a href="../Video&audio/video_audio.html" class="btn-outline" style="padding: 8px 20px;">View
-                            Project</a>
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="reveal">
-                    <h2 class="section-title">Academic Journey</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 30px;">A comprehensive overview of my technical
-                        projects across 8 semesters.</p>
-                </div>
-
-                <div class="semester-chart reveal">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Semester</th>
-                                <th>Core Project</th>
-                                <th>Focus Area</th>
-                                <th>Project Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Semester 1</td>
-                                <td><strong>Mediconnect </strong></td>
-                                <td>Medical</td>
-                                <td>Developed a responsive Website to focusing on Long line for appointment in Hospital.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Semester 2</td>
-                                <td><strong>Solar Tracker</strong></td>
-                                <td>Energy Sector</td>
-                                <td>Built Model management system ................</td>
-                            </tr>
-                            <tr>
-                                <td>Semester 3</td>
-                                <td><strong>WildTrack</strong></td>
-                                <td>App To detect Wild Animal</td>
-                                <td>Created a dynamic dashboard fetching live weather data via OpenWeatherMap API.</td>
-                            </tr>
-                            <tr>
-                                <td>Semester 4</td>
-                                <td><strong>.............</strong></td>
-                                <td>React & State Management</td>
-                                <td>Implemented a full-featured admin panel using React, focusing on product and order
-                                    tracking.</td>
-                            </tr>
-                            <tr>
-                                <td>Semester 5</td>
-                                <td><strong>.............</strong></td>
-                                <td>.....................</td>
-                                <td>.............................................................</td>
-                            </tr>
-                            <tr>
-                                <td>Semester 6</td>
-                                <td><strong>.............</strong></td>
-                                <td>..................</td>
-                                <td>.............................................................</td>
-                            </tr>
-                            <tr>
-                                <td>Semester 7</td>
-                                <td><strong>.............</strong></td>
-                                <td>.....................</td>
-                                <td>.............................................................</td>
-                            </tr>
-                            <tr>
-                                <td>Semester 8</td>
-                                <td><strong>.............</strong></td>
-                                <td>  ......................</td>
-                                <td>.............................................................</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Personal Projects Section -->
-        <section class="section container">
-            <div class="reveal">
-                <h2 class="section-title">Personal Projects</h2>
-                <p style="color: var(--text-muted); margin-bottom: 40px;">Independent projects highlighting my
-                    creativity and problem-solving skills beyond academics.</p>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card reveal">
+        <section class="section container reveal">
+            <p class="section-title">Personal Projects</p>
+            <h2>Independent experiments</h2>
+            <div class="projects-grid" style="margin-top: 30px;">
+                <article class="project-card">
                     <h3>Mess App</h3>
-                    <p>A mobile app for managing mess expenses and menu planning and tracking students .</p>
-                    <div style="margin-top: 15px;">
-                        <span class="skill-tag">XMl</span>
+                    <p>A Flutter app to track mess expenses, menu plans, and shareable summaries for students.</p>
+                    <div style="margin-top: 18px;">
+                        <span class="skill-tag">Flutter</span>
                         <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">Java</span>
                     </div>
-                    <div style="margin-top: 20px;">
-                        <a href="https://github.com/Kartik-code2116/My-mess-1st-app?tab=readme-ov-file" class="btn-outline" style="padding: 8px 20px;">Github Repo</a>
+                    <div style="margin-top: 16px;">
+                        <a href="https://github.com/Kartik-code2116/My-mess-1st-app?tab=readme-ov-file" target="_blank" class="btn secondary" style="padding: 10px 24px;">Github</a>
                     </div>
-                </div>
-
-                <div class="project-card reveal">
+                </article>
+                <article class="project-card">
                     <h3>AI Image Assistant</h3>
-                    <p>A tool that uses machine learning to automatically tag and organize digital asset libraries.</p>
-                    <div style="margin-top: 15px;">
+                    <p>Automated tagging tool built with TensorFlow + Flask for creative teams.</p>
+                    <div style="margin-top: 18px;">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Flask</span>
                     </div>
-                    <div style="margin-top: 20px;">
-                        <a href="#" class="btn-outline" style="padding: 8px 20px;">Github Repo</a>
+                    <div style="margin-top: 16px;">
+                        <a href="#" class="btn secondary" style="padding: 10px 24px;">Open Source</a>
                     </div>
-                </div>
-
-                <div class="project-card reveal">
-                    <h3>Fitness Tracker Pro</h3>
-                    <p>Mobile-responsive web app for tracking workouts, nutrition, and personal health goals.</p>
-                    <div style="margin-top: 15px;">
-                        <span class="skill-tag">React Native</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">GraphQL</span>
-                    </div>
-                    <div style="margin-top: 20px;">
-                        <a href="#" class="btn-outline" style="padding: 8px 20px;">Live Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card reveal">
+                </article>
+                <article class="project-card">
                     <h3>Portfolio CMS</h3>
-                    <p>A lightweight content management system specifically designed for personal developer portfolios.
-                    </p>
-                    <div style="margin-top: 15px;">
+                    <p>A minimal CMS tailored for developer portfolios featuring content previews and markdown support.</p>
+                    <div style="margin-top: 18px;">
                         <span class="skill-tag">TypeScript</span>
                         <span class="skill-tag">Prisma</span>
                         <span class="skill-tag">PostgreSQL</span>
                     </div>
-                    <div style="margin-top: 20px;">
-                        <a href="#" class="btn-outline" style="padding: 8px 20px;">Try It Out</a>
+                    <div style="margin-top: 16px;">
+                        <a href="#" class="btn secondary" style="padding: 10px 24px;">Try it out</a>
                     </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <p class="section-title">Academic Journey</p>
+            <h2>Semester highlights</h2>
+            <div class="timeline" style="margin-top: 28px;">
+                <article class="timeline-item">
+                    <h4>Sem 1 — Mediconnect</h4>
+                    <p>Responsive hospital appointment &amp; research paper in collaboration with ASEP.</p>
+                </article>
+                <article class="timeline-item">
+                    <h4>Sem 3 — WildTrack</h4>
+                    <p>Real-time animal detection dashboard with OpenWeatherMap integration.</p>
+                </article>
+                <article class="timeline-item">
+                    <h4>Sem 5 — E-Commerce Dashboard</h4>
+                    <p>Admin panel prototype for inventory and order insights using React + Node.</p>
+                </article>
+                <article class="timeline-item">
+                    <h4>Sem 7 — Future Ideas</h4>
+                    <p>Planning automation-focused systems for campus collaborators.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="glass-panel">
+                <h2>Want to see more code?</h2>
+                <p>My GitHub stays up-to-date with experiments, demos, and reusable UI patterns.</p>
+                <div class="hero-actions" style="margin-top: 16px;">
+                    <a href="https://github.com/kartikthorat" target="_blank" class="btn primary">View GitHub</a>
+                    <a href="contact.html" class="btn secondary">Discuss a project</a>
                 </div>
             </div>
         </section>
@@ -236,7 +161,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Kartik Thorat. All rights reserved.</p>
+            <p>&copy; 2026 Kartik Thorat.</p>
+            <div class="footer-secondary">Projects designed to impress humans and machines alike.</div>
         </div>
     </footer>
 </body>

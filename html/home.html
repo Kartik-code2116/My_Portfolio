@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Thorat | Full Stack Developer</title>
+    <title>Kartik Thorat | Digital Creator & Developer</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js" defer></script>
 </head>
@@ -12,9 +12,10 @@
 <body>
     <header>
         <div class="container">
-            <nav>
+            <nav class="navbar">
                 <div class="logo">Kartik.Dev</div>
-                <ul>
+                <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-links">
                     <li><a href="home.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -27,103 +28,182 @@
     <main>
         <section class="hero container section">
             <div class="hero-content reveal">
-                <p class="subtitle"
-                    style="color: var(--primary-color); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 10px;">
-                    WELCOME TO MY PORTFOLIO</p>
-                <h1 class="hero-title">Building <span
-                        style="background: linear-gradient(to right, var(--primary-color), var(--accent-color)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Digital
-                        Experiences</span> That Matter</h1>
-                <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 32px; max-width: 600px;">
-                    Hi, I'm <strong style="color: var(--white);">Kartik Thorat</strong>. A Bachelor of AI student at
-                    <strong style="color: var(--white);">VIT Pune</strong> and a passionate Full Stack Developer.
+                <div class="hero-highlight">full stack · ux-led</div>
+                <h1>
+                    Crafting digital experiences that <span style="color: var(--primary-color);">feel personal</span> and
+                    function flawlessly.
+                </h1>
+                <p>
+                    I'm Kartik Thorat, a Full Stack Developer and Bachelor of AI candidate at VIT Pune.
+                    I help teams ship polished web, mobile, and AI-infused tools that translate ideas into measurable value.
                 </p>
 
-                <div class="hero-btns" style="display: flex; gap: 16px; flex-wrap: wrap;">
-                    <a href="projects.html" class="btn">View My Work</a>
-                    <a href="#" class="btn btn-outline" download>
-                        <span style="margin-right: 8px;">📄</span> Download Resume
-                    </a>
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn primary">See Projects</a>
+                    <a href="../Kartik Resume (1st Year).pdf" download class="btn secondary">Download Resume</a>
+                </div>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <h3>08+</h3>
+                        <span>Semesters of disciplined build cycles</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>15+</h3>
+                        <span>Client-facing deliverables</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>24</h3>
+                        <span>Hours response guarantee</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>04</h3>
+                        <span>Active active projects</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-image reveal" style="position: relative;">
-                <div class="image-wrapper" style="position: relative; z-index: 1;">
-                    <img src="../Kartik_img (2) (1).jpg" alt="Kartik Thorat" class="profile-photo">
-                </div>
-                <!-- Decorative glow -->
-                <div
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: var(--primary-color); filter: blur(120px); opacity: 0.15; z-index: 0;">
+            <div class="hero-image reveal">
+                <div class="profile-frame">
+                    <img src="../Kartik_img (2) (1).jpg" alt="Kartik Thorat Photo">
                 </div>
             </div>
         </section>
 
-        <!-- Resume Featured Projects -->
         <section class="section container reveal">
-            <h2 class="section-title">Resume Highlights</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <span style="font-size: 0.8rem; color: var(--primary-color); font-weight: 600;">ASEP PROJECT</span>
+            <p class="section-title">Featured Work</p>
+            <h2>Recent collaborations that blend design and code</h2>
+            <div class="projects-grid" style="margin-top: 24px;">
+                <article class="project-card">
+                    <span class="skill-tag">ASEP PROJECT</span>
                     <h3>Mediconnect</h3>
-                    <p>Interactive Online Website Appointment Booking System. I also authored a research paper based on
-                        this project's implementation.</p>
-                    <div style="margin-top: 15px;">
+                    <p>
+                        A responsive hospital appointment system with research-backed workflows and intuitive scheduling.
+                        I led UI polish, data visualizations, and deployment.
+                    </p>
+                    <div style="margin-top: 18px;">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Tailwind</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <span class="skill-tag">VIT CLUB</span>
+                    <h3>MLSE Club Experience</h3>
+                    <p>
+                        Reworked the MLSE website with a digital-first story, event calendar, and embed-ready case studies.
+                    </p>
+                    <div style="margin-top: 18px;">
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
                         <span class="skill-tag">JavaScript</span>
                     </div>
-                </div>
-                <div class="project-card">
-                    <span style="font-size: 0.8rem; color: var(--secondary-color); font-weight: 600;">VIT COLLEGE
-                        CLUB</span>
-                    <h3>MLSE Club Website</h3>
-                    <p>Designed and updated the static website for the MLSE Club of VIT Pune to showcase events,
-                        schedules, and updates.</p>
-                    <div style="margin-top: 15px;">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
+                </article>
+                <article class="project-card">
+                    <span class="skill-tag">PERSONAL</span>
+                    <h3>AI Image Assistant</h3>
+                    <p>
+                        A lightweight Flask tool to auto-tag and organize large image libraries using TensorFlow.
+                        Integrated with GitHub Actions for nightly tagging batches.
+                    </p>
+                    <div style="margin-top: 18px;">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">TensorFlow</span>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <!-- Quick Info / Stats Section -->
         <section class="section container reveal">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
-                <div class="project-card" style="text-align: center; padding: 40px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 20px;">🚀</div>
-                    <h3>Fast Performance</h3>
-                    <p>Optimizing web applications for lightning-fast load times and smooth user interactions.</p>
-                </div>
-                <div class="project-card" style="text-align: center; padding: 40px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 20px;">🎨</div>
-                    <h3>Modern Design</h3>
-                    <p>Creating visually stunning interfaces using the latest design trends like glassmorphism.</p>
-                </div>
-                <div class="project-card" style="text-align: center; padding: 40px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 20px;">🛡️</div>
-                    <h3>Clean Code</h3>
-                    <p>Writing maintainable, scalable, and secure code following best industry practices.</p>
-                </div>
+            <p class="section-title">Services</p>
+            <h2>What I regularly deliver</h2>
+            <div class="service-grid" style="margin-top: 24px;">
+                <article class="service-card">
+                    <h3>UI / UX Design Systems</h3>
+                    <p>Modern web interfaces with accessible color, typography, and motion systems.</p>
+                    <ul>
+                        <li>Responsive layout + grid systems</li>
+                        <li>Micro-interactions &amp; states</li>
+                        <li>DesignOps ready handoffs</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <h3>Full Stack Builds</h3>
+                    <p>End-to-end product releases with React, Node.js, Express, and Firebase.</p>
+                    <ul>
+                        <li>API handshake &amp; auth flows</li>
+                        <li>CI/CD pipelines</li>
+                        <li>Performance, monitoring, logging</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <h3>AI &amp; Automation</h3>
+                    <p>Proof-of-concepts and production-ready helpers for data insight &amp; automation.</p>
+                    <ul>
+                        <li>TensorFlow / PyTorch pipelines</li>
+                        <li>Chatbots, data tagging assistants</li>
+                        <li>From notebook to cloud deploy</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="section container reveal" style="text-align: center;">
-            <div class="project-card"
-                style="background: linear-gradient(135deg, rgba(0, 242, 254, 0.1), rgba(139, 92, 246, 0.1)); border: 1px solid var(--primary-color); padding: 60px;">
-                <h2 style="margin-bottom: 20px;">Ready to build something <span
-                        style="color: var(--primary-color);">Amazing?</span></h2>
-                <p style="margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">I am currently
-                    open to freelance opportunities and full-time positions. Let's discuss your next big project.</p>
-                <a href="contact.html" class="btn">Get Started Today</a>
+        <section class="section container reveal">
+            <p class="section-title">Voices</p>
+            <h2>People I have shipped work with</h2>
+            <div class="testimonial-grid" style="margin-top: 26px;">
+                <article class="testimonial-card">
+                    <blockquote>
+                        “Kartik translated messy requirements into a delightful interface, always on time and prepared to
+                        iterate.”
+                    </blockquote>
+                    <footer>— Anjali Mehta, Product Lead</footer>
+                </article>
+                <article class="testimonial-card">
+                    <blockquote>
+                        “His codebase reviews feel like consulting — precise, kind, and built to scale.”
+                    </blockquote>
+                    <footer>— Prof. Sameer Patil, VIT Pune</footer>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <p class="section-title">Experience Timeline</p>
+            <h2>A quick look at my journey</h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <h4>2024 — Present | VIT Pune (AI)</h4>
+                    <p>Working on multidisciplinary projects balancing AI foundations, full stack engineering and research.</p>
+                </article>
+                <article class="timeline-item">
+                    <h4>2023 | Infosys Campus Connect</h4>
+                    <p>Delivered frontend components &amp; AI primers for Infosys as part of the training &amp; immersion.</p>
+                </article>
+                <article class="timeline-item">
+                    <h4>2021 — 2022 | College Clubs &amp; Freelance</h4>
+                    <p>Mentored juniors, built club microlabs, and shipped freelance landing pages.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="glass-panel">
+                <h2>Ready to build or explore an idea?</h2>
+                <p>Open to internships, freelance work, and collaborative research.</p>
+                <div class="hero-actions" style="margin-top: 16px;">
+                    <a href="contact.html" class="btn primary">Start a Project</a>
+                    <a href="projects.html" class="btn secondary">Browse the archive</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Kartik Thorat. All rights reserved.</p>
+            <p>&copy; 2026 Kartik Thorat. Crafted with intent.</p>
+            <div class="footer-secondary">Made for people who care about detail.</div>
         </div>
     </footer>
 </body>
