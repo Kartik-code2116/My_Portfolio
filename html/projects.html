@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Kartik Thorat</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="../js/script.js" defer></script>
 </head>
 
@@ -28,7 +29,7 @@
 
     <main>
         <section class="hero container section">
-            <div class="hero-content reveal">
+            <div class="hero-content reveal" data-aos="fade-up">
                 <div class="hero-highlight">builds that ship</div>
                 <h1>Case studies, experiments, and collaborations</h1>
                 <p>
@@ -42,7 +43,7 @@
             <p class="section-title">Academic + Research</p>
             <h2>Featured collaborations</h2>
             <div class="projects-grid" style="margin-top: 30px;">
-                <article class="project-card">
+                <article class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <span class="skill-tag">ASEP</span>
                     <h3>Mediconnect — Appointment OS</h3>
                     <p>A responsive booking system with dynamic scheduling, research documentation, and analytics.</p>
@@ -55,7 +56,7 @@
                         <a href="#" class="btn secondary" style="padding: 10px 24px;">View Paper</a>
                     </div>
                 </article>
-                <article class="project-card">
+                <article class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <span class="skill-tag">VIT MLSE</span>
                     <h3>Club Experience Portal</h3>
                     <p>Redesigned the MLSE club’s site with event timelines, membership flows, and storytelling modules.</p>
@@ -68,7 +69,7 @@
                         <a href="#" class="btn secondary" style="padding: 10px 24px;">View Launch</a>
                     </div>
                 </article>
-                <article class="project-card">
+                <article class="project-card" data-aos="fade-up" data-aos-delay="300">
                     <span class="skill-tag">Concept</span>
                     <h3>Product Dashboard</h3>
                     <p>Interactive sales dashboard built with responsive charts and a focus on accessibility.</p>
@@ -88,7 +89,7 @@
             <p class="section-title">Personal Projects</p>
             <h2>Independent experiments</h2>
             <div class="projects-grid" style="margin-top: 30px;">
-                <article class="project-card">
+                <article class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <h3>Mess App</h3>
                     <p>A Flutter app to track mess expenses, menu plans, and shareable summaries for students.</p>
                     <div style="margin-top: 18px;">
@@ -99,7 +100,7 @@
                         <a href="https://github.com/Kartik-code2116/My-mess-1st-app?tab=readme-ov-file" target="_blank" class="btn secondary" style="padding: 10px 24px;">Github</a>
                     </div>
                 </article>
-                <article class="project-card">
+                <article class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <h3>AI Image Assistant</h3>
                     <p>Automated tagging tool built with TensorFlow + Flask for creative teams.</p>
                     <div style="margin-top: 18px;">
@@ -110,7 +111,7 @@
                         <a href="#" class="btn secondary" style="padding: 10px 24px;">Open Source</a>
                     </div>
                 </article>
-                <article class="project-card">
+                <article class="project-card" data-aos="fade-up" data-aos-delay="300">
                     <h3>Portfolio CMS</h3>
                     <p>A minimal CMS tailored for developer portfolios featuring content previews and markdown support.</p>
                     <div style="margin-top: 18px;">
@@ -128,7 +129,7 @@
         <section class="section container reveal">
             <p class="section-title">Academic Journey</p>
             <h2>Semester highlights</h2>
-            <div class="timeline" style="margin-top: 28px;">
+            <div class="timeline" style="margin-top: 28px;" data-aos="fade-up">
                 <article class="timeline-item">
                     <h4>Sem 1 — Mediconnect</h4>
                     <p>Responsive hospital appointment &amp; research paper in collaboration with ASEP.</p>
@@ -153,7 +154,7 @@
         </section>
 
         <section class="section container reveal">
-            <div class="glass-panel">
+            <div class="glass-panel" data-aos="fade-up">
                 <h2>Want to see more code?</h2>
                 <p>My GitHub stays up-to-date with experiments, demos, and reusable UI patterns.</p>
                 <div class="hero-actions" style="margin-top: 16px;">
@@ -170,5 +171,9 @@
             <div class="footer-secondary">Projects designed to impress humans and machines alike.</div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
