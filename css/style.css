@@ -339,6 +339,19 @@ header {
     gap: 16px;
 }
 
+/* Resume Page Specific Styles */
+.resume-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .resume-skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .contact-card strong {
     letter-spacing: 0.1em;
     text-transform: uppercase;
