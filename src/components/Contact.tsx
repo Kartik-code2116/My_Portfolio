@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { db } from '../firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -56,9 +58,20 @@ export const Contact: React.FC = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
+      try {
+        await addDoc(collection(db, "contacts"), {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          timestamp: serverTimestamp()
+        });
+        console.log("Contact submission saved in Firestore successfully!");
+      } catch (err) {
+        console.error("Could not write document to Firestore database:", err);
+      }
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => {
