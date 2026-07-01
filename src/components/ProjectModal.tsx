@@ -31,94 +31,94 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ projectTitle, onClos
   }, [onClose]);
 
   const caseStudies: Record<string, CaseStudyDetails> = {
-    'Mediconnect — Appointment OS': {
-      role: 'Lead UI/UX Developer & System Integrator',
-      challenge: 'The medical team had scheduling collision issues where double bookings occurred during high traffic. High-latency database querying made scheduling unresponsive.',
-      solution: 'Rebuilt slot-allocation hooks using React context and optimized MongoDB compound index logic to check availability in O(1) latency before staging reservations.',
+    'EduReport (Startup Initiative)': {
+      role: 'Founder / Lead Developer',
+      challenge: 'Educators in Maharashtra State Board schools spent countless hours manually calculating grades and generating yearly academic reports, leading to delays and errors.',
+      solution: 'Developed the "EduReport" application to digitize the process, engineering a scalable system to securely manage student records and calculate performance metrics accurately.',
       architecture: [
-        'React Context & Stateful Hooks',
-        'Node.js & Express REST Endpoints',
-        'MongoDB indexing patterns'
+        'Java core logic',
+        'Scalable data management',
+        'Secure student record handling'
       ],
       metrics: [
-        'Collision rates dropped from 6% to 0%',
-        'Page weight optimized for 3G loads in under 1.5s',
-        '99% positive feedback during hospital trials'
+        'Streamlined grading process significantly',
+        'Automated report generation for Grades 1–10',
+        'Ensured accurate yearly performance metrics'
       ]
     },
-    'MLSE Club Experience Portal': {
-      role: 'UI Designer & Frontend Engineer',
-      challenge: 'The club had stale media content and no unified place to showcase ongoing student machine learning project milestones and registration events.',
-      solution: 'Crafted a digital-first story flow with lazy-loaded timeline elements and embeddable code sandbox case studies using responsive grid designs.',
+    'Student Mess Management System': {
+      role: 'Android Developer',
+      challenge: 'Local food messes relied on manual bookkeeping to track daily operations, student meal plans, and subscription renewals, leading to discrepancies.',
+      solution: 'Developed a centralized, digital Android app with an intuitive user interface that allows mess owners to seamlessly monitor subscriptions and attendance.',
       architecture: [
-        'HTML5 & Modern CSS grids',
-        'Vanilla JS scroll orchestration',
-        'Performance optimized media lazy loading'
+        'Java Android Development',
+        'Centralized digital tracking',
+        'Intuitive User Interface'
       ],
       metrics: [
-        'Increased visitor session times by 120%',
-        '3,000+ registration inputs captured in 1 week',
-        'Achieved 100/100 Lighthouse performance metrics'
+        'Eliminated manual bookkeeping',
+        'Streamlined daily student attendance',
+        'Simplified subscription renewals'
       ]
     },
-    'Product Dashboard': {
-      role: 'Frontend UI Engineer',
-      challenge: 'Legacy analytics software contained dense, unreadable grid data that violated WCAG accessibility compliance standards for color contrast and assistive screen-readers.',
-      solution: 'Designed an ARIA-compliant dashboard using fully styled SVG charts with high-contrast palette toggle patterns.',
+    'WildTrack AI': {
+      role: 'Backend & Android Developer',
+      challenge: 'Wildlife monitoring lacked real-time, accurate animal detection with immediate alerts to ensure safety in specific locations.',
+      solution: 'Engineered a monitoring system using ML models for animal detection, backed by a JavaScript server and a Kotlin Android app for location-based alerts.',
       architecture: [
-        'React & Component-level scoping',
-        'Chart.js svg drawing hooks',
-        'ARIA-compliant accessibility layout'
+        'Kotlin (Android Client)',
+        'JavaScript (Backend Server)',
+        'Machine Learning Models'
       ],
       metrics: [
-        '100% WCAG 2.1 AA Compliance Score',
-        'Load time optimized under 150ms',
-        'Accessible color modes mapped dynamically'
+        'Real-time accurate animal detection',
+        'Immediate location-based safety alerts',
+        'Efficient live ML prediction processing'
       ]
     },
-    'Mess App': {
-      role: 'Full Stack Flutter Developer',
-      challenge: 'Students living in common hostels struggled to track rotating mess bills, menu schedules, and budget allocations in static shared spreadsheets.',
-      solution: 'Built a cross-platform Flutter application backed by Firebase Realtime Database triggers for automatic price index splits.',
+    'Adaptive Deepfake Detection & Zoom Clone': {
+      role: 'Full Stack AI Developer',
+      challenge: 'Online meetings faced risks of impersonation and cheating due to sophisticated deepfakes that were difficult to detect in real-time.',
+      solution: 'Built a custom video conferencing app integrating a real-time ML model using gaze biometrics to ensure media authenticity without disrupting the call.',
       architecture: [
-        'Flutter & Dart framework',
-        'Firebase Realtime Database triggers',
-        'Firebase OAuth authentication'
+        'Python Video Processing',
+        'Machine Learning (Gaze Biometrics)',
+        'Low-latency video streaming'
       ],
       metrics: [
-        'Active user count grew to 350+ students in 1 month',
-        'Synced price updates with less than 40ms lag',
-        'Zero ledger discrepancies reported across semesters'
+        'Analyzed live video with minimal latency',
+        'Prevented impersonation in active calls',
+        'Maintained smooth user communication'
       ]
     },
-    'AI Image Assistant': {
-      role: 'AI Researcher & DevOps Developer',
-      challenge: 'Marketing and design teams spent upwards of 10 hours weekly manually sorting, tag-naming, and uploading raw image assets to repository directories.',
-      solution: 'Integrated a TensorFlow visual analysis pipeline inside a Flask backend triggered by Git triggers for automated nightly cataloging.',
+    'Live Face Swap Integration': {
+      role: 'Computer Vision Developer',
+      challenge: 'Achieving seamless, realistic face swaps on live video streams requires high computational efficiency and accurate facial landmark mapping.',
+      solution: 'Created a real-time application utilizing advanced Computer Vision algorithms and optimized ML models to accurately transpose faces during live execution.',
       architecture: [
-        'Python & Flask microservice',
-        'TensorFlow pre-trained classification models',
-        'GitHub Actions continuous pipeline integration'
+        'Python',
+        'Advanced Computer Vision algorithms',
+        'Optimized ML model training'
       ],
       metrics: [
-        'Saved creative teams 10+ manual labor hours weekly',
-        '94.2% catalog categorization accuracy achieved',
-        'Automated 12,000+ directory asset tagging routines'
+        'Maintained high frame rates',
+        'Ensured smooth facial transformations',
+        'Accurate facial landmark mapping'
       ]
     },
-    'Portfolio CMS': {
-      role: 'Backend Creator',
-      challenge: 'Standard content tools are bulky, slow down initial page loads, and introduce vulnerabilities through unmonitored dependencies.',
-      solution: 'Configured a minimal, lightweight markdown CMS tailored for developers using Prisma ORM with secured PostgreSQL databases.',
+    'MediConnect (Hospital Management System)': {
+      role: 'Frontend Developer',
+      challenge: 'Patients faced long wait times and physical lines outside clinics due to inefficient queue management and appointment scheduling.',
+      solution: 'Designed and developed a responsive frontend web interface for appointment booking to streamline patient intake and improve efficiency.',
       architecture: [
-        'TypeScript API design',
-        'Prisma client schema mapping',
-        'PostgreSQL relationship indexing'
+        'HTML5 & CSS3',
+        'Responsive UI/UX Design',
+        'Digital scheduling platform'
       ],
       metrics: [
-        'Reduced database payload transfer weight to 1.1KB',
-        '10x faster loads compared to traditional systems',
-        'Protected markdown render sandbox parameters'
+        'Reduced patient physical wait times',
+        'Streamlined hospital outpatient intake',
+        'Delivered foundational platform architecture'
       ]
     }
   };

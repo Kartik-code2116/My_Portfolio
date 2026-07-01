@@ -18,56 +18,55 @@ export const Projects: React.FC = () => {
 
   const projectsData: Project[] = [
     {
-      title: 'Mediconnect — Appointment OS',
-      category: 'Academic & Research',
-      desc: 'A responsive hospital appointment booking system with research-backed workflows, dynamic scheduling, and an analytics dashboard.',
-      tags: ['React', 'Express', 'MongoDB'],
-      linkText: 'View Project Details'
-    },
-    {
-      title: 'MLSE Club Experience Portal',
-      category: 'Academic & Research',
-      desc: 'Reworked the MLSE club’s site with a digital-first story, event timelines, membership flows, and storytelling modules.',
-      tags: ['HTML5', 'CSS3', 'JavaScript'],
-      linkText: 'View Launch Details'
-    },
-    {
-      title: 'Product Dashboard',
-      category: 'Academic & Research',
-      desc: 'Interactive sales dashboard built with responsive chart elements, data visualization layers, and a focus on accessibility.',
-      tags: ['React', 'Chart.js', 'Node.js'],
-      linkText: 'Live Demo'
-    },
-    {
-      title: 'Mess App',
+      title: 'EduReport (Startup Initiative)',
       category: 'Personal Experiment',
-      desc: 'A Flutter mobile application to track mess expenses, menu plans, and shareable summaries for college students.',
-      tags: ['Flutter', 'Firebase'],
-      linkText: 'Github Repository',
-      linkUrl: 'https://github.com/Kartik-code2116/My-mess-1st-app?tab=readme-ov-file'
+      desc: 'Founded a startup initiative to digitize and automate the generation of yearly academic reports for Maharashtra State Board schools.',
+      tags: ['Java', 'Scalable Architecture'],
+      linkText: 'View Case Study'
     },
     {
-      title: 'AI Image Assistant',
+      title: 'Student Mess Management System',
       category: 'Personal Experiment',
-      desc: 'A lightweight Flask tool that auto-tags and organizes large image libraries using pre-trained TensorFlow modules.',
-      tags: ['Python', 'Flask', 'TensorFlow'],
-      linkText: 'Open Source Code'
+      desc: 'Developed an Android application to streamline daily operations, subscription tracking, and student record management for local food messes.',
+      tags: ['Java', 'Android', 'Firebase'],
+      linkText: 'View Case Study'
     },
     {
-      title: 'Portfolio CMS',
+      title: 'WildTrack AI',
+      category: 'Academic & Research',
+      desc: 'Real-time wildlife monitoring and mobile notification system utilizing Machine Learning models for accurate animal detection.',
+      tags: ['Kotlin', 'JavaScript', 'Machine Learning'],
+      linkText: 'View Case Study'
+    },
+    {
+      title: 'Adaptive Deepfake Detection & Zoom Clone',
+      category: 'Academic & Research',
+      desc: 'Built a live video conferencing application integrated with a real-time Machine Learning model to detect deepfakes during active calls.',
+      tags: ['Python', 'Machine Learning', 'Computer Vision'],
+      linkText: 'View Case Study'
+    },
+    {
+      title: 'Live Face Swap Integration',
       category: 'Personal Experiment',
-      desc: 'A minimal content management system tailored for developer portfolios featuring markdown preview and API delivery.',
-      tags: ['TypeScript', 'Prisma', 'PostgreSQL'],
-      linkText: 'Try it out'
+      desc: 'Created a real-time Face Swap application using advanced Computer Vision algorithms, designed for integration into live video calling systems.',
+      tags: ['Python', 'Computer Vision', 'Machine Learning'],
+      linkText: 'View Case Study'
+    },
+    {
+      title: 'MediConnect (Hospital Management System)',
+      category: 'Academic & Research',
+      desc: 'Designed and developed the frontend web interface for a hospital queue management system aimed at reducing patient wait times.',
+      tags: ['HTML', 'CSS', 'UI/UX'],
+      linkText: 'View Case Study'
     }
   ];
 
   const timelineData = [
-    { sem: 'Sem 1', title: 'Mediconnect', desc: 'Responsive hospital appointment & research paper in collaboration with ASEP.' },
-    { sem: 'Sem 3', title: 'WildTrack', desc: 'Real-time animal detection dashboard with OpenWeatherMap integration.' },
-    { sem: 'Sem 4', title: 'Deepfake Detection', desc: 'Platform to secure online interactions by showing trust levels based on facial verification.' },
-    { sem: 'Sem 5', title: 'E-Commerce Dashboard', desc: 'Admin panel prototype for inventory and order insights using React + Node.' },
-    { sem: 'Sem 7', title: 'Future Ideas', desc: 'Planning automation-focused systems for campus collaborators.' }
+    { sem: 'Sem 1', title: 'Mediconnect', desc: 'Skills Developed: Web Development, UI/UX Design, and foundational technical concepts.' },
+    { sem: 'Sem 2', title: 'Skill Development Phase', desc: 'Deepened my knowledge in core technologies. Realized that persistence is the vehicle you arrive in. "The only way to do great work is to love what you do."' },
+    { sem: 'Sem 3', title: 'Animal Detection App', desc: 'Skills Developed: Android App Development, Machine Learning model integration, and Kotlin.' },
+    { sem: 'Sem 4', title: 'Deepfake Learning', desc: 'Skills Developed: React.js, Machine Learning, Computer Vision, and other related AI concepts.' },
+    { sem: 'Continuous', title: 'Lifelong Learning', desc: '"Success is not final, failure is not fatal: it is the courage to continue that counts." Always pushing the boundaries of my skills.' }
   ];
 
   const filteredProjects = projectsData.filter((proj) => {
@@ -146,9 +145,9 @@ export const Projects: React.FC = () => {
 
       <div style={{ textAlign: 'center', margin: '80px 0 48px' }}>
         <span className="section-title">Timeline</span>
-        <h2>Academic Highlights</h2>
+        <h2>Academic & Growth Highlights</h2>
         <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-          A roadmap of my build milestones during my semesters at VIT Pune.
+          A roadmap of my build milestones, skill development, and motivational lessons learned.
         </p>
       </div>
 
