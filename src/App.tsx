@@ -4,8 +4,6 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Services } from './components/Services';
 import { Projects } from './components/Projects';
-import { Publications } from './components/Publications';
-import { OpenSource } from './components/OpenSource';
 import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { InteractiveTerminal } from './components/InteractiveTerminal';
@@ -39,7 +37,7 @@ function App() {
 
   // IntersectionObserver to auto-update active nav state on scroll
   useEffect(() => {
-    const sections = ['home', 'about', 'services', 'projects', 'publications', 'opensource', 'testimonials', 'faq', 'terminal', 'contact'];
+    const sections = ['home', 'about', 'services', 'projects', 'testimonials', 'faq', 'terminal', 'contact'];
     const observers = sections.map((sectionId) => {
       const el = document.getElementById(sectionId);
       if (!el) return null;
@@ -48,7 +46,7 @@ function App() {
         ([entry]) => {
           if (entry.isIntersecting) {
             // Map sub-projects sections to highlight "projects" in navbar
-            if (['publications', 'opensource', 'terminal'].includes(sectionId)) {
+            if (['terminal'].includes(sectionId)) {
               setActiveSection('projects');
             } else if (['testimonials', 'faq'].includes(sectionId)) {
               setActiveSection('about');
@@ -85,8 +83,6 @@ function App() {
         <About />
         <Services />
         <Projects />
-        <Publications />
-        <OpenSource />
         <InteractiveTerminal />
         <Testimonials />
         <FAQ />

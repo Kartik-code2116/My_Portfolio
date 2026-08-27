@@ -18,45 +18,59 @@ export const Projects: React.FC = () => {
 
   const projectsData: Project[] = [
     {
-      title: 'EduReport (Startup Initiative)',
-      category: 'Personal Experiment',
-      desc: 'Founded a startup initiative to digitize and automate the generation of yearly academic reports for Maharashtra State Board schools.',
-      tags: ['Java', 'Scalable Architecture'],
-      linkText: 'View Case Study'
-    },
-    {
-      title: 'Student Mess Management System',
-      category: 'Personal Experiment',
-      desc: 'Developed an Android application to streamline daily operations, subscription tracking, and student record management for local food messes.',
-      tags: ['Java', 'Android', 'Firebase'],
-      linkText: 'View Case Study'
-    },
-    {
       title: 'WildTrack AI',
       category: 'Academic & Research',
-      desc: 'Real-time wildlife monitoring and mobile notification system utilizing Machine Learning models for accurate animal detection.',
-      tags: ['Kotlin', 'JavaScript', 'Machine Learning'],
+      desc: 'A real-time wildlife monitoring and alert system utilizing edge-cloud hybrid processing for rural intrusion detection. Features YOLOv8 ML inference and low-latency push notifications.',
+      tags: ['Kotlin', 'JavaScript', 'YOLOv8'],
       linkText: 'View Case Study'
     },
     {
-      title: 'Adaptive Deepfake Detection & Zoom Clone',
-      category: 'Academic & Research',
-      desc: 'Built a live video conferencing application integrated with a real-time Machine Learning model to detect deepfakes during active calls.',
-      tags: ['Python', 'Machine Learning', 'Computer Vision'],
-      linkText: 'View Case Study'
-    },
-    {
-      title: 'Live Face Swap Integration',
+      title: 'EduReport',
       category: 'Personal Experiment',
-      desc: 'Created a real-time Face Swap application using advanced Computer Vision algorithms, designed for integration into live video calling systems.',
-      tags: ['Python', 'Computer Vision', 'Machine Learning'],
+      desc: 'A comprehensive mobile platform enabling teachers to streamline attendance, CCE grades, and automated progress report generation using scalable NoSQL databases.',
+      tags: ['Java', 'Firebase Firestore'],
       linkText: 'View Case Study'
     },
     {
-      title: 'MediConnect (Hospital Management System)',
+      title: 'AURA',
+      category: 'Personal Experiment',
+      desc: 'A personal finance and daily goal tracking application that uses a directed graph node-based layout to accurately model complex financial relationships and monetary flows.',
+      tags: ['Dart'],
+      linkText: 'View Case Study'
+    },
+    {
+      title: 'Deepfake Detection Platform',
       category: 'Academic & Research',
-      desc: 'Designed and developed the frontend web interface for a hospital queue management system aimed at reducing patient wait times.',
-      tags: ['HTML', 'CSS', 'UI/UX'],
+      desc: 'An adaptive real-time deepfake detection pipeline integrated into a video conferencing interface using gaze biometric analysis and advanced computer vision.',
+      tags: ['Python', 'OpenCV', 'MediaPipe'],
+      linkText: 'View Case Study'
+    },
+    {
+      title: 'Messapp',
+      category: 'Personal Experiment',
+      desc: 'A mobile application designed to manage food mess menus, student subscription plans, and daily meal selections with secure backend data systems.',
+      tags: ['Java', 'Firebase Firestore'],
+      linkText: 'View Case Study'
+    },
+    {
+      title: 'UrbanGuard / CivicPulse AI',
+      category: 'Academic & Research',
+      desc: 'A zero-trust identity-aware security architecture for managing city infrastructure APIs and access controls, featuring robust RBAC models.',
+      tags: ['TypeScript'],
+      linkText: 'View Case Study'
+    },
+    {
+      title: 'BG Verify',
+      category: 'Academic & Research',
+      desc: 'An industry background verification project utilizing Agentic AI and Retrieval-Augmented Generation (RAG).',
+      tags: ['AI', 'Agentic AI', 'RAG'],
+      linkText: 'View Case Study'
+    },
+    {
+      title: 'AI-Powered Security Assistant',
+      category: 'Academic & Research',
+      desc: 'An AI-powered security assistant designed for safe URL and document analysis to identify and mitigate potential threats.',
+      tags: ['AI', 'Security'],
       linkText: 'View Case Study'
     }
   ];
@@ -64,8 +78,9 @@ export const Projects: React.FC = () => {
   const timelineData = [
     { sem: 'Sem 1', title: 'Mediconnect', desc: 'Skills Developed: Web Development, UI/UX Design, and foundational technical concepts.' },
     { sem: 'Sem 2', title: 'Skill Development Phase', desc: 'Deepened my knowledge in core technologies. Realized that persistence is the vehicle you arrive in. "The only way to do great work is to love what you do."' },
-    { sem: 'Sem 3', title: 'Animal Detection App', desc: 'Skills Developed: Android App Development, Machine Learning model integration, and Kotlin.' },
-    { sem: 'Sem 4', title: 'Deepfake Learning', desc: 'Skills Developed: React.js, Machine Learning, Computer Vision, and other related AI concepts.' },
+    { sem: 'Sem 3', title: 'WildTrack AI', desc: 'Skills Developed: Android App Development, Machine Learning model integration, Kotlin, and YOLOv8.' },
+    { sem: 'Sem 4', title: 'Deepfake Detection Platform', desc: 'Skills Developed: Python, OpenCV, MediaPipe, Machine Learning, and Computer Vision.' },
+    { sem: 'Sem 5', title: 'AI & Security', desc: 'Developed BG Verify (Agentic AI & RAG) and an AI-Powered Security Assistant for safe URL and document analysis.' },
     { sem: 'Continuous', title: 'Lifelong Learning', desc: '"Success is not final, failure is not fatal: it is the courage to continue that counts." Always pushing the boundaries of my skills.' }
   ];
 
