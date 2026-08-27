@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Services } from './components/Services';
+import { Experience } from './components/Experience';
+import { Education } from './components/Education';
+import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
-import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { InteractiveTerminal } from './components/InteractiveTerminal';
 import { Contact } from './components/Contact';
@@ -14,11 +15,14 @@ import { ThemeCustomizer } from './components/ThemeCustomizer';
 import { CustomCursor } from './components/CustomCursor';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
   const [particlesEnabled, setParticlesEnabled] = useState(true);
+  const [isSinglePage, setIsSinglePage] = useState(true);
+  const [activeSection, setActiveSection] = useState('home');
 
-  // Handle smooth scroll when clicking navbar links
+  // Handle smooth scroll when clicking navbar links (Single Page Mode)
   const handleNavClick = (sectionId: string) => {
+    if (!isSinglePage) return; // Router handles multi-page clicks
+
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80; // height of the navbar
@@ -35,9 +39,11 @@ function App() {
     }
   };
 
-  // IntersectionObserver to auto-update active nav state on scroll
+  // IntersectionObserver to auto-update active nav state on scroll (Single Page Mode)
   useEffect(() => {
-    const sections = ['home', 'about', 'services', 'projects', 'testimonials', 'faq', 'terminal', 'contact'];
+    if (!isSinglePage) return;
+
+    const sections = ['home', 'experience', 'education', 'skills', 'projects', 'faq', 'terminal', 'contact'];
     const observers = sections.map((sectionId) => {
       const el = document.getElementById(sectionId);
       if (!el) return null;
@@ -45,19 +51,16 @@ function App() {
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            // Map sub-projects sections to highlight "projects" in navbar
             if (['terminal'].includes(sectionId)) {
               setActiveSection('projects');
-            } else if (['testimonials', 'faq'].includes(sectionId)) {
-              setActiveSection('about');
+            } else if (['faq'].includes(sectionId)) {
+              setActiveSection('experience');
             } else {
               setActiveSection(sectionId);
             }
           }
         },
-        {
-          rootMargin: '-30% 0px -60% 0px'
-        }
+        { rootMargin: '-30% 0px -60% 0px' }
       );
 
       observer.observe(el);
@@ -66,34 +69,62 @@ function App() {
 
     return () => {
       observers.forEach((obs) => {
-        if (obs) {
+        if (obs && obs.el) {
           obs.observer.unobserve(obs.el);
         }
       });
     };
-  }, []);
+  }, [isSinglePage]);
 
   return (
-    <>
+    <Router>
       <CustomCursor />
       <ParticleBackground enabled={particlesEnabled} />
-      <Navbar activeSection={activeSection} onNavClick={handleNavClick} />
-      <main style={{ position: 'relative', zIndex: 1 }}>
-        <Hero onProjectsClick={() => handleNavClick('projects')} />
-        <About />
-        <Services />
-        <Projects />
-        <InteractiveTerminal />
-        <Testimonials />
-        <FAQ />
-        <Contact />
+      <Navbar 
+        isSinglePage={isSinglePage} 
+        setIsSinglePage={setIsSinglePage} 
+        activeSection={activeSection}
+        onNavClick={handleNavClick}
+      />
+      
+      <main style={{ position: 'relative', zIndex: 1, minHeight: '80vh', paddingTop: '80px' }}>
+        {isSinglePage ? (
+          // Single-Page Layout
+          <>
+            <Hero isSinglePage={isSinglePage} onProjectsClick={() => handleNavClick('projects')} />
+            <Experience />
+            <Education />
+            <Skills />
+            <Projects />
+            <InteractiveTerminal />
+            <FAQ />
+            <Contact />
+          </>
+        ) : (
+          // Multi-Page Layout
+          <Routes>
+            <Route path="/" element={<Hero isSinglePage={isSinglePage} onProjectsClick={() => handleNavClick('projects')} />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+                <Contact />
+                <InteractiveTerminal />
+                <FAQ />
+              </div>
+            } />
+          </Routes>
+        )}
       </main>
+      
       <Footer />
       <ThemeCustomizer 
         particlesEnabled={particlesEnabled} 
         setParticlesEnabled={setParticlesEnabled} 
       />
-    </>
+    </Router>
   );
 }
 

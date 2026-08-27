@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Core Color Palette - Premium Obsidian & Cyberpunk Accents */
-  --bg-base: #0a0b10;
-  --bg-surface: rgba(20, 22, 33, 0.6);
-  --bg-surface-hover: rgba(28, 31, 46, 0.8);
+  /* Core Color Palette - Professional Slate & Blue/Indigo */
+  --bg-base: #0f1115;
+  --bg-surface: rgba(25, 27, 33, 0.6);
+  --bg-surface-hover: rgba(35, 38, 45, 0.8);
   --border-color: rgba(255, 255, 255, 0.08);
-  --border-color-glow: rgba(0, 229, 255, 0.3);
+  --border-color-glow: rgba(56, 189, 248, 0.2);
   
-  --primary-color: #00e5ff;       /* Electric Cyan */
-  --secondary-color: #b026ff;     /* Vivid Violet */
-  --accent-color: #ff2a74;        /* Crimson Pink */
+  --primary-color: #38bdf8;       /* Professional Sky Blue */
+  --secondary-color: #818cf8;     /* Indigo Accent */
+  --accent-color: #34d399;        /* Emerald Success */
   
-  --primary-glow: rgba(0, 229, 255, 0.15);
-  --secondary-glow: rgba(176, 38, 255, 0.15);
+  --primary-glow: rgba(56, 189, 248, 0.1);
+  --secondary-glow: rgba(129, 140, 248, 0.1);
   
   --text-primary: #f3f4f6;
   --text-secondary: #9ca3af;
@@ -49,8 +49,8 @@ html {
 body {
   overflow-x: hidden;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(0, 229, 255, 0.04) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(176, 38, 255, 0.04) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.03) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
