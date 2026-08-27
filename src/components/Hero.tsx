@@ -1,34 +1,42 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface HeroProps {
-  onProjectsClick: () => void;
+  isSinglePage?: boolean;
+  onProjectsClick?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onProjectsClick }) => {
+export const Hero: React.FC<HeroProps> = ({ isSinglePage, onProjectsClick }) => {
   const stats = [
-    { value: '08+', label: 'Semesters of build cycles' },
-    { value: '15+', label: 'Client-facing projects' },
-    { value: '24h', label: 'Response guarantee' },
-    { value: '04', label: 'Active collaborations' }
+    { value: '3+', label: 'Years Programming' },
+    { value: '10+', label: 'Projects Completed' },
+    { value: 'AI / ML', label: 'Specialization' },
+    { value: 'Full Stack', label: 'Development' }
   ];
 
   return (
     <section id="home" className="section container">
       <div className="hero-wrapper">
         <div className="hero-info">
-          <div className="hero-highlight">Full Stack · UX-Led</div>
-          <h1>
-            Crafting digital experiences that <span className="text-gradient">feel personal</span> and function flawlessly.
+          <div className="hero-highlight">Software Engineer · AI Enthusiast</div>
+          <h1 style={{ fontSize: '3.2rem' }}>
+            Building scalable systems and <span className="text-gradient">intelligent solutions.</span>
           </h1>
           <p>
-            I'm Kartik Thorat, a Full Stack Developer and Bachelor of AI student at VIT Pune.
-            I build polished web, mobile, and AI-powered interfaces that translate ideas into clean code and high performance.
+            I'm Kartik Thorat, a Computer Science student at VIT Pune. 
+            I specialize in Full Stack Development, Artificial Intelligence, and Machine Learning. Passionate about translating complex problems into clean, high-performance software.
           </p>
           
           <div className="hero-actions">
-            <button onClick={onProjectsClick} className="btn primary">
-              See Projects
-            </button>
+            {isSinglePage ? (
+              <button onClick={onProjectsClick} className="btn primary">
+                See Projects
+              </button>
+            ) : (
+              <Link to="/projects" className="btn primary">
+                See Projects
+              </Link>
+            )}
             <a href="/Kartik Resume (1st Year).pdf" download className="btn secondary">
               Download Resume
             </a>

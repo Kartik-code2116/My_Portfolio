@@ -75,14 +75,7 @@ export const Projects: React.FC = () => {
     }
   ];
 
-  const timelineData = [
-    { sem: 'Sem 1', title: 'Mediconnect', desc: 'Skills Developed: Web Development, UI/UX Design, and foundational technical concepts.' },
-    { sem: 'Sem 2', title: 'Skill Development Phase', desc: 'Deepened my knowledge in core technologies. Realized that persistence is the vehicle you arrive in. "The only way to do great work is to love what you do."' },
-    { sem: 'Sem 3', title: 'WildTrack AI', desc: 'Skills Developed: Android App Development, Machine Learning model integration, Kotlin, and YOLOv8.' },
-    { sem: 'Sem 4', title: 'Deepfake Detection Platform', desc: 'Skills Developed: Python, OpenCV, MediaPipe, Machine Learning, and Computer Vision.' },
-    { sem: 'Sem 5', title: 'AI & Security', desc: 'Developed BG Verify (Agentic AI & RAG) and an AI-Powered Security Assistant for safe URL and document analysis.' },
-    { sem: 'Continuous', title: 'Lifelong Learning', desc: '"Success is not final, failure is not fatal: it is the courage to continue that counts." Always pushing the boundaries of my skills.' }
-  ];
+  // Timeline removed to distinct Experience/Education components
 
   const filteredProjects = projectsData.filter((proj) => {
     if (filter === 'all') return true;
@@ -158,25 +151,7 @@ export const Projects: React.FC = () => {
         ))}
       </div>
 
-      <div style={{ textAlign: 'center', margin: '80px 0 48px' }}>
-        <span className="section-title">Timeline</span>
-        <h2>Academic & Growth Highlights</h2>
-        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-          A roadmap of my build milestones, skill development, and motivational lessons learned.
-        </p>
-      </div>
-
-      <div className="timeline">
-        {timelineData.map((item, idx) => (
-          <div key={idx} className={`timeline-item ${idx % 2 === 0 ? 'left' : 'right'}`}>
-            <div className="timeline-content">
-              <h4>{item.sem}</h4>
-              <span style={{ fontWeight: '600', color: 'var(--text-primary)' }}>{item.title}</span>
-              <p>{item.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      {/* Timeline removed from here */}
 
       {activeProject && (
         <ProjectModal 
